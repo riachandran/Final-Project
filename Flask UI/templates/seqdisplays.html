@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ClassifyCovi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300'><link rel="stylesheet" href="{{ url_for('static', filename='css/seqdisplays.css') }}">
+
+</head>
+<body>
+  <div class="headtop">
+    <img id="logo" src="{{ url_for('static', filename='images/gsulogo.jpg') }}"/>
+  </div>
+  <br>
+<!-- partial:index.partial.html -->
+<!-- partial:index.partial.html -->
+<div class="upload">
+  <div class="upload-files">
+ 
+   <header>
+    <p>
+     <span class="up">PWM</span>
+     <span class="load">2Vec</span>
+    </p>
+   </header>
+    <div style="padding: 10px; text-align:center;"><button class="submitbutton">Start</button></div>
+    <div>
+        <div style="padding: 10px; text-align:center;"><p id="messageForLoad" style="font-family: Helvetica;font-weight: bold; color: rgb(33, 151, 122);"></p></div>
+        <iframe frameborder="0" 
+                onresize="noresize"
+                style='background: transparent; width: 100%; height:100%; overflow-y: auto; font-family: Helvetica;' 
+                src="{{ url_for('processSeq')}}">
+        </iframe>
+    </div>
+    <div id="testModel" style="padding: 10px; text-align:center; display: none;"><button class="submitbutton">Test Model</button></div>
+  </div>
+  
+ </div>
+
+ <!-- partial -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script  src="{{ url_for('static', filename='js/seqdisplays.js') }}"></script>
+</body>
+</html>

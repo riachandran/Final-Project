@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ClassifyCovi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300'><link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+</head>
+<body>
+  <div class="headtop">
+    <img id="logo" src="{{ url_for('static', filename='images/gsulogo.jpg') }}"/>
+  </div>
+  <br>
+<!-- partial:index.partial.html -->
+<!-- partial:index.partial.html -->
+<div class="upload">
+  <div class="upload-files">
+ 
+   <header>
+    <p>
+     <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+     <span class="up">up</span>
+     <span class="load">load</span>
+    </p>
+   </header>
+   <div class="body" id="drop">
+    <i class="fa fa-file-text-o pointer-none" aria-hidden="true"></i>
+    <p class="pointer-none"><a href="" id="triggerFile"><b>Browse</b></a> to begin the upload</p>
+    <form id="file-form" method="post" enctype="multipart/form-data">
+       <input type="file" id="file" multiple="multiple" />
+     </form>
+   </div>
+   
+   <footer>
+    <div class="divider">
+     <br>
+     
+     <!-- <button class="submitbutton"> SUBMIT </button> -->
+    </div>
+    
+    <div class="list-files">
+     <!--   template   -->
+     
+    </div>
+       <button class="importar">UPDATE FILES</button>
+       
+   </footer>
+  </div>
+  
+ </div>
+ 
+ <div class="upload2">
+   <h3 style="text-align: center; color: #4db6ac;">About PWM2Vec</h3>
+   <p>The study of host specificity has important connections to the question about the origin of SARS-CoV-2 in 
+     humans which led to the COVID-19 pandemic—an important open question. The study of the different hosts which can be potential carriers and 
+     transmitters of deadly viruses to humans is crucial to understanding, mitigating, and preventing current 
+     and future pandemics. In coronaviruses, the surface (S) protein, or spike protein, is important in 
+     determining host specificity, since it is the point of contact between the virus and the host cell membrane. 
+     <br><br>This tool can be used to classify the hosts of over five thousand coronaviruses from their spike protein sequences, 
+     segregating them into clusters of distinct hosts among birds, bats, camels, swine, humans, and weasels, to 
+     name a few. A new feature embedding based on the well-known position weight matrix (PWM), called 
+     PWM2Vec, is used to generate feature vectors from the spike protein sequences of these coronaviruses. 
+     The results on real world data show that when using PWM2Vec, machine 
+     learning classifiers are able to perform comparably to the baseline models in terms of predictive performance 
+     and runtime—in some cases, the performance is better.</p>
+ 
+     
+ 
+ </div>
+ <!-- partial -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script  src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
