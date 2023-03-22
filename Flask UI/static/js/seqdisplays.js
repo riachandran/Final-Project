@@ -6,7 +6,7 @@ App.init = function () {
   //Init
   
 
-  $(".submitbutton").addEventListener("click", () => {
+  $("#start").addEventListener("click", () => {
     document.getElementById("messageForLoad").innerHTML="Loading processed sequences....";
     jQuery.ajax({
         type: "GET",
@@ -14,9 +14,16 @@ App.init = function () {
         success: function(res) {
             console.log('hit');
             document.getElementById("testModel").style.display = "block";
+            document.getElementById("messageForLoad").style.display = "none";
         },
     });
   });
+
+  $("#run").addEventListener("click", () => {
+    window.location.href = '/runML';
+  });
+
+
 }();
 
 

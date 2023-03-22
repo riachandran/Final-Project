@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ClassifyCovi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300'><link rel="stylesheet" href="{{ url_for('static', filename='css/modelresult.css') }}">
+
+</head>
+<body>
+  <div class="headtop">
+    <img id="logo" src="{{ url_for('static', filename='images/gsulogo.jpg') }}"/>
+  </div>
+  <br>
+<!-- partial:index.partial.html -->
+<!-- partial:index.partial.html -->
+<div class="upload">
+  <div class="upload-files">
+ 
+   <header>
+    <p>
+     <span class="up">PWM2Vec</span>
+     <span class="load">: Testing with Support Vector Machine</span>
+    </p>
+   </header>
+   
+
+   <div class="container" style="padding: 10px; text-align:center;display:flex; justify-content:center;">
+    <table>
+        <h1>
+        <!--Displaying the converted table-->
+            {% for table in tables %}
+            <h2 style="padding: 15px; text-align:center; color: darkgrey; font-family: Helvetica;">{{titles[loop.index]}}</h2>                        
+            {{ table|safe }}
+            {% endfor %}     
+        </h1> 
+      </table>
+   </div>
+   
+    <div id="testModel" style="padding: 10px; text-align:center;"><button id="run" onclick="window.location.href = '/runML'" class="submitbutton">Test Models</button></div>
+  </div>
+  
+ </div>
+
+ <!-- partial -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script  src="{{ url_for('static', filename='js/modelresult.js') }}"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ClassifyCovi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300'><link rel="stylesheet" href="{{ url_for('static', filename='css/modelruns.css') }}">
+
+</head>
+<body>
+  <div class="headtop">
+    <img id="logo" src="{{ url_for('static', filename='images/gsulogo.jpg') }}"/>
+  </div>
+  <br>
+<!-- partial:index.partial.html -->
+<!-- partial:index.partial.html -->
+<div class="upload">
+  <div class="upload-files">
+ 
+   <header>
+    <p>
+     <span class="up">PWM2Vec</span>
+     <span class="load">: Run ML Models</span>
+    </p>
+   </header>
+   <div class="grid-container">
+    <div class="item1"><div style="padding: 10px; text-align:center;"><button id="runRF" class="submitbutton"> RF Classifier</button></div></div>
+    <div class="item2"><div style="padding: 10px; text-align:center;"><button id="runSVM" class="submitbutton">SVM Classifier</button></div></div>
+    <div class="item3"><div style="padding: 10px; text-align:center;"><button id="runMLP" class="submitbutton">MLP Classifier</button></div></div>
+    <div class="item4"><div style="padding: 10px; text-align:center;"><button id="runKNN" class="submitbutton">KNN Classifier</button></div></div>
+    <div class="item5"><div style="padding: 10px; text-align:center;"><button id="runLR" class="submitbutton"> LR Classifier</button></div></div>
+    <div class="item6"><div style="padding: 10px; text-align:center;"><button id="runDT" class="submitbutton"> DT Classifier</button></div></div>
+  </div>
+  </div>
+  
+ </div>
+
+ <!-- partial -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script  src="{{ url_for('static', filename='js/modelruns.js') }}"></script>
+</body>
+</html>
