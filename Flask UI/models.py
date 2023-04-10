@@ -67,7 +67,7 @@ def svm_fun_kernel(X_train,y_train,X_test,y_test,kernel_mat):
     macro_roc_auc_ovo = roc_auc_score_multiclass(y_test, y_prob, average='macro')
 #    print(macro_roc_auc_ovo[1])
     check = [svm_acc,svm_prec,svm_recall,svm_f1_weighted,svm_f1_macro,svm_f1_micro,macro_roc_auc_ovo[1]]
-    return(check)
+    return(check),y_pred
     
 # In[5]
 ##########################  SVM Classifier  ################################
@@ -107,7 +107,7 @@ def svm_fun(X_train,y_train,X_test,y_test):
     macro_roc_auc_ovo = roc_auc_score_multiclass(y_test, y_prob, average='macro')
 #    print(macro_roc_auc_ovo[1])
     check = [svm_acc,svm_prec,svm_recall,svm_f1_weighted,svm_f1_macro,svm_f1_micro,macro_roc_auc_ovo[1]]
-    return(check)
+    return(check),y_pred
     
 
 
@@ -143,7 +143,7 @@ def gaus_nb_fun(X_train,y_train,X_test,y_test):
     y_prob = y_pred
     macro_roc_auc_ovo = roc_auc_score_multiclass(y_test, y_prob, average='macro')
     check = [NB_acc,NB_prec,NB_recall,NB_f1_weighted,NB_f1_macro,NB_f1_micro,macro_roc_auc_ovo[1]]
-    return(check)
+    return(check),y_pred
 
 # In[5]
 ##########################  MLP Classifier  ################################
@@ -188,7 +188,7 @@ def mlp_fun(X_train,y_train,X_test,y_test):
     macro_roc_auc_ovo = roc_auc_score_multiclass(y_test, y_prob, average='macro')
     
     check = [MLP_acc,MLP_prec,MLP_recall,MLP_f1_weighted,MLP_f1_macro,MLP_f1_micro,macro_roc_auc_ovo[1]]
-    return(check)
+    return(check),y_pred
 
 # In[5]
 ##########################  knn Classifier  ################################
@@ -224,7 +224,7 @@ def knn_fun(X_train,y_train,X_test,y_test):
     macro_roc_auc_ovo = roc_auc_score_multiclass(y_test, y_prob, average='macro')
     
     check = [knn_acc,knn_prec,knn_recall,knn_f1_weighted,knn_f1_macro,knn_f1_micro,macro_roc_auc_ovo[1]]
-    return(check)
+    return(check),y_pred
 
 # In[5]
 ##########################  Random Forest Classifier  ################################
@@ -299,7 +299,7 @@ def lr_fun(X_train,y_train,X_test,y_test):
     macro_roc_auc_ovo = roc_auc_score_multiclass(y_test, y_prob, average='macro')
     
     check = [LR_acc,LR_prec,LR_recall,LR_f1_weighted,LR_f1_macro,LR_f1_micro,macro_roc_auc_ovo[1]]
-    return(check)
+    return(check),y_pred
 
 
 def fun_decision_tree(X_train,y_train,X_test,y_test):
@@ -335,4 +335,4 @@ def fun_decision_tree(X_train,y_train,X_test,y_test):
     macro_roc_auc_ovo = roc_auc_score_multiclass(y_test, y_prob, average='macro')
     
     check = [dt_acc,dt_prec,dt_recall,dt_f1_weighted,dt_f1_macro,dt_f1_micro,macro_roc_auc_ovo[1]]
-    return(check)
+    return(check),y_pred

@@ -39,7 +39,7 @@
       </table>
    </div>
    
-    <div id="testModel" style="padding: 10px; text-align:center;"><button id="run" onclick="window.location.href = '/runML'" class="submitbutton">Test Models</button></div>
+    <div id="testModel" style="padding: 10px; text-align:center;"><button id="run" onclick="window.location.href = '/runML'" class="submitbutton">Test Models</button>&nbsp;<a href="{{ url_for('static', filename='results/rf_results.csv') }}" download="rf_results.csv"><button type="button" class="submitbutton">Download CSV</button></a></div>
   </div>
   
  </div>
